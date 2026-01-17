@@ -1,4 +1,58 @@
+# HubSpot Form Shortcut
 
+**HubSpot Form Shortcut** is a lightweight Chrome extension that adds a minimal link directly inside embedded HubSpot forms, allowing you to jump straight to the form’s **HubSpot performance page** from any live website.
+
+No inspecting DOM elements.  
+No copying portal IDs or form IDs.  
+No manually constructing URLs.
+
+---
+
+## What this extension does
+
+When a page loads, HubSpot Form Shortcut runs entirely in your browser and:
+
+1. Detects embedded HubSpot forms on the page  
+2. Extracts the **portal ID** and **form ID** from the form markup  
+3. Builds the correct HubSpot performance URL at runtime  
+4. Injects a small, unobtrusive link inside the form  
+
+Clicking the link opens the form’s **performance page** in HubSpot, where you can:
+- Review submissions
+- Edit the form
+- View associated marketing campaigns
+- Inspect workflows tied to the form
+
+---
+
+## Why this exists
+
+HubSpot forms are identified by two values:
+- **Portal ID** (your HubSpot account)
+- **Form ID** (a unique GUID)
+
+Those values are always present in the page when a form renders—but HubSpot does not expose an easy way to navigate from a live embedded form back to its internal form record.
+
+Without this extension, accessing the form requires:
+- Opening DevTools
+- Inspecting the form element
+- Extracting IDs
+- Manually assembling the HubSpot URL
+
+HubSpot Form Shortcut automates that entire workflow.
+
+---
+
+## How it works (technical overview)
+
+- Runs **100% at runtime** in the browser  
+- Scans the DOM for known HubSpot form patterns:
+  - `data-portal-id` / `data-form-id`
+  - HubSpot form IDs and class names
+  - Submission endpoints when present
+  - HubSpot share pages via `window.hs_RequestParams`
+- Builds the performance URL using the standard HubSpot format:
+  https://app.hubspot.com/submissions/{portalId}/form/{formId}/performance
 - Injects a single link inside the form  
 - Flags forms as processed to avoid duplicate injection  
 - Re-checks the page multiple times to catch late-loaded forms (without infinite polling)
