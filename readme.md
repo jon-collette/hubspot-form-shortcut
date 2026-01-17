@@ -86,7 +86,7 @@ The extension explicitly **does not run** on HubSpot application pages (for exam
 
 ### From the Chrome Web Store
 👉 **Install HubSpot Form Shortcut**  
-(LINK TO CHROME WEB STORE)
+https://chromewebstore.google.com/detail/hubspot-form-shortcut/fhdigmbmlcienhomcailaclnkkedajaa
 
 ### Local development
 This repository is provided for transparency and review.  
