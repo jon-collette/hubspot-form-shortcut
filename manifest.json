@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "HubSpot Form Shortcut",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds a quick link below embedded HubSpot forms to open the form’s performance page in HubSpot. All processed at run-time.",
   "host_permissions": ["<all_urls>"],
   "icons": {

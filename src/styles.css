@@ -1,11 +1,10 @@
-.hs-form-link-wrap-20xj6 {
-    display: block;
-    width: auto;
-    flex: 0 0 auto;
-    align-self: flex-start;
+div[id^="hs-form-link-wrap-20xj6-"] {
+    display: block !important;
+    width: auto !important;
+    flex: 0 0 auto !important;
+    align-self: flex-start !important;
 }
-
-.hs-form-link-20xj6 {
+div[id^="hs-form-link-wrap-20xj6-"] a[id^="hs-form-link-20xj6-"] {
   all: initial !important;
   font-family: "Courier", monospace !important;
   display: inline-block !important;
@@ -18,4 +17,20 @@
   border-radius: 8px !important;
   background: white !important;
   font-weight: strong !important;
+  cursor: pointer !important;
+}
+div[id^="hs-form-link-wrap-20xj6-"] a[id^="hs-form-link-20xj6-"]:hover {
+  all: initial !important;
+  font-family: "Courier", monospace !important;
+  display: inline-block !important;
+  margin: 8px 0 !important;
+  padding: 4px 6px !important;
+  font-size: 13px !important;
+  text-decoration: none !important;
+  color: white !important;
+  border: 1px solid #0000EE !important;
+  border-radius: 8px !important;
+  background: #0000EE !important;
+  font-weight: strong !important;
+  cursor: pointer !important;
 }

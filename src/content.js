@@ -28,9 +28,15 @@
   }
 
   function createLink(performanceUrl) {
+    // generate unique id with time now millisecond id
+	uid = Date.now();
+    wrapperId = "hs-form-link-wrap-20xj6-" + uid;
+    linkId = "hs-form-link-20xj6-" + uid;
+  
   	// added wrapper to override form flex
     const wrapper = document.createElement("div");
     wrapper.className = "hs-form-link-wrap-20xj6";
+    wrapper.id = wrapperId;
 
 	// generate link
     const link = document.createElement("a");
@@ -38,6 +44,7 @@
     link.href = performanceUrl;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
+    link.id = linkId;
     link.textContent = "🔗 Go to HubSpot Form →";
 
     wrapper.appendChild(link);
