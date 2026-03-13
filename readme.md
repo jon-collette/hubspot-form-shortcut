@@ -106,6 +106,12 @@ If you regularly find yourself asking *“Which form is this?”*, this extensio
 
 ---
 
+## Chrome Extension Packaging reminder
+
+Package is just the files, no parent folder
+
+---
+
 ## Copyright
 
 Copyright © 2026  

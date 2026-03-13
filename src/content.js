@@ -1,7 +1,7 @@
 (() => {
   const PROCESSED_ATTR = "data-hs-form-jump-done";
   const SHARE_PROCESSED_ATTR = "data-hs-form-jump-share-done";
-  const DEBUG = true;
+  const DEBUG = false;
 
   function log(...args) {
     if (DEBUG) console.log("[HubSpot Form Shortcut]", ...args);
