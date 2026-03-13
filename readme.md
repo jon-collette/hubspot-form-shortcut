@@ -51,11 +51,12 @@ HubSpot Form Shortcut automates that entire workflow.
   - HubSpot form IDs and class names
   - Submission endpoints when present
   - HubSpot share pages via `window.hs_RequestParams`
+  - HubSpot iFrame embeds (and reads from embed script instead)
 - Builds the performance URL using the standard HubSpot format:
   https://app.hubspot.com/submissions/{portalId}/form/{formId}/performance
-- Injects a single link inside the form  
+- Injects a single link after the form (to unify handling on iframe and dynamically added forms)
 - Flags forms as processed to avoid duplicate injection  
-- Re-checks the page multiple times to catch late-loaded forms (without infinite polling)
+- Re-checks the page multiple times to catch late-loaded forms at init, 3, 6, 9 seconds (without infinite polling)
 
 The extension is defensive by design and works across modern, dynamically injected HubSpot form embeds.
 
